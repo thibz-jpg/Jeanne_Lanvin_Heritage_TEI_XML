@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT TEI (teiHeader, text)>
+<!ELEMENT teiHeader (fileDesc, profileDesc, encodingDesc)>
+<!ELEMENT fileDesc (titleStmt, publicationStmt, sourceDesc)>
+<!ELEMENT titleStmt (title, author, respStmt)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT respStmt (resp, name)>
+<!ELEMENT resp (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT publicationStmt (publisher, pubPlace, date)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT pubPlace (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT sourceDesc (msDesc)>
+<!ELEMENT msDesc (msIdentifier, msContents, physDesc)>
+<!ELEMENT msIdentifier (country, settlement, repository, idno)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT settlement (#PCDATA | address | placeName | country)*>
+<!ELEMENT repository (#PCDATA)>
+<!ELEMENT idno (#PCDATA)>
+<!ELEMENT msContents (p)>
+<!ELEMENT p (#PCDATA)>
+<!ELEMENT physDesc (objectDesc)>
+<!ELEMENT objectDesc (supportDesc)>
+<!ELEMENT supportDesc (extent,condition)>
+<!ELEMENT extent (dimensions)>
+<!ELEMENT dimensions (height, width, depth)>
+<!ELEMENT height (#PCDATA)>
+<!ATTLIST height
+    unit CDATA #REQUIRED>
+<!ELEMENT width (#PCDATA)>
+<!ATTLIST width
+    unit CDATA #REQUIRED>
+<!ELEMENT depth (#PCDATA)>
+<!ATTLIST depth
+    unit CDATA #REQUIRED>
+<!ELEMENT condition (#PCDATA)>
+<!ELEMENT profileDesc (langUsage, textClass, correspDesc)>
+<!ELEMENT langUsage (language+)>
+<!ELEMENT language (#PCDATA)>
+<!ATTLIST language
+    ident CDATA #REQUIRED>
+<!ELEMENT textClass (keywords)>
+<!ELEMENT keywords (term)>
+<!ATTLIST keywords
+    scheme CDATA #REQUIRED>
+<!ELEMENT term (#PCDATA)>
+<!ELEMENT correspDesc (correspAction+)>
+<!ELEMENT correspAction (persName, settlement, placeName, date)>
+<!ATTLIST correspAction
+    type CDATA #REQUIRED>
+<!ELEMENT persName (#PCDATA)>
+<!ELEMENT address (#PCDATA | ref | addrLine | persName | settlement)*>
+<!ELEMENT addrLine (#PCDATA | ref)*>
+<!ELEMENT ref (#PCDATA)>
+<!ATTLIST ref
+    target CDATA #REQUIRED>
+<!ELEMENT placeName (#PCDATA)>
+<!ELEMENT encodingDesc (editorialDecl)>
+<!ELEMENT editorialDecl (hyphenation)>
+<!ELEMENT hyphenation (p)>
+<!ATTLIST hyphenation
+    eol CDATA #REQUIRED>
+<!ELEMENT text (front, body, back)>
+<!ELEMENT front (head)>
+<!ELEMENT head (figure, persName, address, listPlace)>
+<!ELEMENT figure (figDesc)>
+<!ELEMENT figDesc (#PCDATA)>
+<!ELEMENT listPlace (place)>
+<!ELEMENT place (settlement*)>
+<!ELEMENT body (opener, p+, note*)>
+<!ELEMENT opener (dateline, address, salute)>
+<!ELEMENT dateline (placeName, date)>
+<!ELEMENT salute (#PCDATA)>
+<!ELEMENT note (#PCDATA)>
+<!ATTLIST note
+    place CDATA #IMPLIED>
+<!ELEMENT back (closer, note*)>
+<!ELEMENT closer (salute, signed)>
+<!ELEMENT signed (name, figure)>
+
+

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<!DOCTYPE TEI SYSTEM "Jeanne_Lanvin_DTD.dtd">
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+            <author>Author</author>
+            <respStmt>
+               <resp>Compiled by</resp>
+               <name>Name</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Name</publisher>
+            <pubPlace>Place</pubPlace>
+            <date>Date</date>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country>Country</country>
+                  <settlement>Settlement</settlement>
+                  <repository>Repository</repository>
+                  <idno>Idno</idno>
+               </msIdentifier>
+               <msContents>
+                  <p>Contents</p>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <extent>
+                           <dimensions>
+                              <height unit="mm"></height>
+                              <width unit="mm"></width>
+                              <depth unit="mm"></depth>
+                           </dimensions>
+                        </extent>
+                        <condition>Condition</condition>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">français</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="type">
+               <term>Type such as personnal correspondence, invoice, official letter</term>
+            </keywords>
+         </textClass>
+         <correspDesc>
+            <correspAction type="sent">
+               <persName>Name</persName>
+               <settlement>
+                  <address>
+                     <addrLine>Line1</addrLine>
+                     <addrLine>Line2</addrLine>
+                  </address>
+               </settlement>
+               <placeName>Place</placeName>
+               <date>Date</date>
+            </correspAction>
+            <correspAction type="received">
+               <persName>Name</persName>
+               <settlement>
+                  <address>
+                     <addrLine>Line1</addrLine>
+                     <addrLine>Line2</addrLine>
+                  </address>
+               </settlement>
+            </correspAction>
+         </correspDesc>
+      </profileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <hyphenation eol="none">
+               <p>Hyphenated words that appear at the end of the line in the Foner edition have been
+                  reformed.</p>
+            </hyphenation>
+         </editorialDecl>
+      </encodingDesc>
+  </teiHeader>
+  <text>
+      <front>
+         <head>
+            <figure>
+               <figDesc>BrandLogo</figDesc>
+            </figure>
+            <persName>NameSender</persName>
+            <address>
+               <addrLine>Line1</addrLine>
+               <addrLine>Line2</addrLine>
+               <addrLine>
+                  <ref target="tel:PhoneNumber1">PhoneNumber1</ref>
+                  <ref target="tel:PhoneNumber2">PhoneNumber2</ref>
+               </addrLine>
+               <addrLine>TelegraphicAddress</addrLine>
+            </address>
+            <listPlace>
+               <place>
+                  <settlement>
+                     <placeName>Boutique1</placeName>
+                     <address>
+                        <addrLine>Address1</addrLine>
+                        <addrLine>
+                        <ref target="tel:PhoneNumber1">PhoneNumber1</ref>
+                        </addrLine>
+                     </address>
+                  </settlement>
+                  <settlement>
+                     <placeName>Boutique2</placeName>
+                     <address>
+                        <addrLine>Address2</addrLine>
+                        <addrLine>
+                           <ref target="tel:PhoneNumber2">PhoneNumber2</ref>
+                        </addrLine>
+                     </address>
+                  </settlement>
+                  <settlement>
+                     <placeName>Boutique3</placeName>
+                     <address>
+                        <addrLine>Address3</addrLine>
+                        <addrLine>
+                           <ref target="tel:PhoneNumber3">PhoneNumber3</ref>
+                        </addrLine>
+                     </address>
+                  </settlement>
+                  <settlement>
+                     <placeName>Boutique4</placeName>
+                     <address>
+                        <addrLine>Address4</addrLine>
+                        <addrLine>
+                           <ref target="tel:PhoneNumber4">PhoneNumber4</ref>
+                        </addrLine>
+                     </address>
+                  </settlement>
+                  <settlement>
+                     <placeName>Boutique5</placeName>
+                     <address>
+                        <addrLine>Address5</addrLine>
+                        <addrLine>
+                           <ref target="tel:PhoneNumber5">PhoneNumber5</ref>
+                        </addrLine>
+                     </address>
+                     <country></country>
+                  </settlement>
+               </place>                  
+            </listPlace>
+         </head>
+      </front>
+      <body>
+         <opener>
+            <dateline>
+               <placeName>WritingPlace</placeName>
+               <date>WritingDate</date>
+            </dateline>
+            <address>
+               <persName>NameReceiver</persName>
+               <addrLine>AddressReceiver</addrLine>
+               <settlement>CityReceiver</settlement>
+            </address>
+            <salute></salute>
+         </opener>
+         <p>Text</p>
+         <note place="margin"></note>
+      </body>
+      <back>
+         <closer>
+            <salute></salute>
+            <signed>
+               <name></name>
+               <figure></figure>
+            </signed>
+         </closer>
+         <note place="margin"></note>
+      </back>
+  </text>
+</TEI>
